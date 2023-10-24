@@ -65,6 +65,11 @@ input::-webkit-inner-spin-button {
     font-style: normal;
     font-weight: 500;
     line-height: 24px; 
+    cursor: pointer;
+}
+
+#convert-btn:hover {
+    opacity: 0.5;
 }
 
 #results-container {
