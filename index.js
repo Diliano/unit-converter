@@ -16,9 +16,11 @@ const convertBtn = document.getElementById("convert-btn");
 const lengthResult = document.getElementById("length-result");
 
 convertBtn.addEventListener("click", function() {
+    convertLength();
+});
+
+function convertLength() {
     const metersToFeet = (inputEl.value * 3.281).toFixed(3);
     const feetToMeters = (inputEl.value / 3.281).toFixed(3);
-    console.log(metersToFeet);
-    console.log(feetToMeters);
     lengthResult.textContent = `${inputEl.value} meters = ${metersToFeet} feet | ${inputEl.value} feet = ${feetToMeters} meters`;
-});
+}
