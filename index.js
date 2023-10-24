@@ -18,25 +18,27 @@ const volumeResult = document.getElementById("volume-result");
 const massResult = document.getElementById("mass-result");
 
 convertBtn.addEventListener("click", function() {
-    convertLength();
-    convertVolume();
-    convertMass();
+    const inputValue = Math.abs(inputEl.value);
+    inputEl.value = inputValue;
+    convertLength(inputValue);
+    convertVolume(inputValue);
+    convertMass(inputValue);
 });
 
-function convertLength() {
-    const metersToFeet = (inputEl.value * 3.281).toFixed(3);
-    const feetToMeters = (inputEl.value / 3.281).toFixed(3);
-    lengthResult.textContent = `${inputEl.value} meters = ${metersToFeet} feet | ${inputEl.value} feet = ${feetToMeters} meters`;
+function convertLength(input) {
+    const metersToFeet = (input * 3.281).toFixed(3);
+    const feetToMeters = (input / 3.281).toFixed(3);
+    lengthResult.textContent = `${input} meters = ${metersToFeet} feet | ${input} feet = ${feetToMeters} meters`;
 }
 
-function convertVolume() {
-    const litersToGallons = (inputEl.value * 0.264).toFixed(3);
-    const gallonsToLiters = (inputEl.value / 0.264).toFixed(3);
-    volumeResult.textContent = `${inputEl.value} liters = ${litersToGallons} gallons | ${inputEl.value} gallons = ${gallonsToLiters} liters`;
+function convertVolume(input) {
+    const litersToGallons = (input * 0.264).toFixed(3);
+    const gallonsToLiters = (input / 0.264).toFixed(3);
+    volumeResult.textContent = `${input} liters = ${litersToGallons} gallons | ${input} gallons = ${gallonsToLiters} liters`;
 }
 
-function convertMass() {
-    const kilosToPounds = (inputEl.value * 2.204).toFixed(3);
-    const poundsToKilos = (inputEl.value / 2.204).toFixed(3);
-    massResult.textContent = `${inputEl.value} kilos = ${kilosToPounds} pounds | ${inputEl.value} pounds = ${poundsToKilos} kilos`;
+function convertMass(input) {
+    const kilosToPounds = (input * 2.204).toFixed(3);
+    const poundsToKilos = (input / 2.204).toFixed(3);
+    massResult.textContent = `${input} kilos = ${kilosToPounds} pounds | ${input} pounds = ${poundsToKilos} kilos`;
 }
