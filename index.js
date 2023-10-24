@@ -15,10 +15,12 @@ inputEl.addEventListener("input", function() {
 const convertBtn = document.getElementById("convert-btn");
 const lengthResult = document.getElementById("length-result");
 const volumeResult = document.getElementById("volume-result");
+const massResult = document.getElementById("mass-result");
 
 convertBtn.addEventListener("click", function() {
     convertLength();
     convertVolume();
+    convertMass();
 });
 
 function convertLength() {
@@ -31,4 +33,10 @@ function convertVolume() {
     const litersToGallons = (inputEl.value * 0.264).toFixed(3);
     const gallonsToLiters = (inputEl.value / 0.264).toFixed(3);
     volumeResult.textContent = `${inputEl.value} liters = ${litersToGallons} gallons | ${inputEl.value} gallons = ${gallonsToLiters} liters`;
+}
+
+function convertMass() {
+    const kilosToPounds = (inputEl.value * 2.204).toFixed(3);
+    const poundsToKilos = (inputEl.value / 2.204).toFixed(3);
+    massResult.textContent = `${inputEl.value} kilos = ${kilosToPounds} pounds | ${inputEl.value} pounds = ${poundsToKilos} kilos`;
 }
