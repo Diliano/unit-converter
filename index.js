@@ -11,3 +11,14 @@ inputEl.addEventListener("input", function() {
         inputEl.value = inputEl.value.slice(0, 5);
     }
 })
+
+const convertBtn = document.getElementById("convert-btn");
+const lengthResult = document.getElementById("length-result");
+
+convertBtn.addEventListener("click", function() {
+    const metersToFeet = (inputEl.value * 3.281).toFixed(3);
+    const feetToMeters = (inputEl.value / 3.281).toFixed(3);
+    console.log(metersToFeet);
+    console.log(feetToMeters);
+    lengthResult.textContent = `${inputEl.value} meters = ${metersToFeet} feet | ${inputEl.value} feet = ${feetToMeters} meters`;
+});
