@@ -43,6 +43,7 @@ input::-webkit-inner-spin-button {
     background: none;
     border: 2px solid #B295FF;
     border-radius: 5px;
+    font-family: Inter;
     font-size: 40px; 
     font-style: normal;
     font-weight: 800;
@@ -60,6 +61,7 @@ input::-webkit-inner-spin-button {
     background: #FFF; 
     border-radius: 5px; 
     border: none;
+    font-family: Inter;
     color: #3D3D3D; 
     font-size: 16px;
     font-style: normal;
